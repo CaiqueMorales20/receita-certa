@@ -1,23 +1,23 @@
 // Imports
-import styled, {css} from 'styled-components/native';
+import styled, { css } from 'styled-components/native'
 
 // CM Framework
 // Types
 interface TitleType {
-  size: 'xs' | 'sm' | 'base' | 'lg' | 'xl';
-  color?: 'text-black' | 'text-white' | 'text-gray' | 'text-green';
-  weight?: 'bold' | 'semibold' | 'normal' | 'thin';
-  align?: 'left' | 'justify' | 'center';
+  size: 'xs' | 'sm' | 'base' | 'lg' | 'xl'
+  color?: 'text-black' | 'text-white' | 'text-gray' | 'text-green'
+  weight?: 'bold' | 'semibold' | 'normal' | 'thin'
+  align?: 'left' | 'justify' | 'center'
 }
 
 export const AppS = styled.SafeAreaView`
-  background: ${props => props.theme.colors.background};
+  background: ${(props) => props.theme.colors.background};
   flex: 1;
-`;
+`
 
 // CM Framework
 export const Text = styled.Text<TitleType>`
-  ${props =>
+  ${(props) =>
     props.size &&
     css`
       font-size: ${props.size === 'xs'
@@ -43,7 +43,7 @@ export const Text = styled.Text<TitleType>`
         ? '30px'
         : ''};
     `}
-  ${props =>
+  ${(props) =>
     props.color &&
     css`
       color: ${props.color === 'text-black'
@@ -56,7 +56,7 @@ export const Text = styled.Text<TitleType>`
         ? props.theme.colors.primary
         : ''};
     `}
-    ${props =>
+    ${(props) =>
     props.weight &&
     css`
       font-weight: ${props.weight === 'bold'
@@ -69,7 +69,7 @@ export const Text = styled.Text<TitleType>`
         ? '300'
         : ''};
     `}
-    ${props =>
+    ${(props) =>
     props.align &&
     css`
       text-align: ${props.align === 'left'
@@ -80,4 +80,4 @@ export const Text = styled.Text<TitleType>`
         ? 'justify'
         : ''};
     `}
-`;
+`

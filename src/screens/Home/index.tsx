@@ -1,6 +1,7 @@
 // Imported Components
 import Container from '../../../components/Container'
 import { Text } from '../../../global/globalStyle'
+import List from './List'
 
 // Styled Components
 import { HomeS } from './style'
@@ -11,9 +12,10 @@ export default function Home() {
   return (
     <Container>
       <HomeS>
-        <Text size="lg" color="text-white">
-          Home
+        <Text size="lg" color="text-white" weight="bold">
+          Receita certa
         </Text>
+        <List />
       </HomeS>
     </Container>
   )
